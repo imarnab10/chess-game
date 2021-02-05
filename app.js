@@ -3,7 +3,7 @@ const app = express();
 
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-
+var port = process.env.PORT || 3000;
 // var roomno = 1;
 
 app.use(express.static(__dirname + '/public'));
@@ -12,7 +12,7 @@ app.get('/', (request, response) => {
     response.sendFile('/public/ChessBoard.html' , { root : __dirname});
 });
 
-http.listen(3000, function(){
+http.listen(port, function(){
     console.log("listening on port 3000");
 });
 

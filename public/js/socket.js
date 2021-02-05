@@ -3,7 +3,7 @@ if( roomName === ""){
     roomName = "home";
 }
 
-var socket = io('http://localhost:3000');
+var socket = io();
 // NOTE: this example uses the chess.js library:
 // https://github.com/jhlywa/chess.js
 
